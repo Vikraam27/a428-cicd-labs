@@ -1,7 +1,7 @@
 node {
     docker.image('node:lts-bullseye-slim').inside {
-        stage('Install package') {
-            sh "npm install"
+        stage('list all file') {
+            sh "ls"
         }
     }
 }
