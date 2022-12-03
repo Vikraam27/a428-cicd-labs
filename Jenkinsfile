@@ -8,3 +8,5 @@ node {
     }
     }
 }
+
+// test scm trigger
