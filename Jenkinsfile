@@ -1,12 +1,7 @@
 node {
     docker.image('node:lts-bullseye-slim').inside {
-    stage('Install package') {
-        sh "npm install"
-    }
-    stage('Test') {
-        sh './jenkins/scripts/test.sh'
-    }
+        stage('Install package') {
+            sh "npm install"
+        }
     }
 }
-
-// test scm trigger
