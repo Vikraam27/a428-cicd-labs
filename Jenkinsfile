@@ -1,7 +1,7 @@
 node {
     docker.image('node:lts-bullseye-slim').inside {
-        stage('Build') {
-            sh "ls -a"
+        stage('Install package') {
+            sh 'git rev-parse --abbrev-ref HEAD'
         }
     }
 }
