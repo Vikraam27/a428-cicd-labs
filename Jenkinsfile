@@ -1,6 +1,6 @@
 node {
     docker.image('node:lts-bullseye-slim').inside {
-        stage('Install package') {
+        stage('Build') {
             checkout scm
             sh "npm install"
         }
