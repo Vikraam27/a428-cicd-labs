@@ -11,7 +11,7 @@ node {
         stage('Manual Approval') {
             checkout scm
             sh './jenkins/scripts/deliver.sh' 
-            input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk mengakhiri)' 
+            input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk melanjutkan)' 
             sh './jenkins/scripts/kill.sh' 
         }
     }
