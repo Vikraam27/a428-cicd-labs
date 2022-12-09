@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env sh
 
 echo "change directory"
 cd a428-cicd-labs
