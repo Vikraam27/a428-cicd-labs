@@ -18,7 +18,7 @@ node {
      stage('Deploy') {
         checkout scm
         sshagent(credentials:['Login_Cloud_Server']){
-            sh 'ssh  -o StrictHostKeyChecking=no  vikram@35.219.77.187 "whoami"'
+            sh 'ssh  -o StrictHostKeyChecking=no  vikram@35.219.77.187 "ls"'
         }
     }
 }
