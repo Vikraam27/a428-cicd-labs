@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Nav from './component/Nav'
+import './App.css'
+import Banner from './component/Banner';
+import Projects from './component/Projects';
+import Profile from './component/Profile';
+import Footer from './component/Footer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+function App(props) {
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+  }, [])
+  return (
+    <div>
+      <Nav />
+      <Banner />
+      <main>
+        <Projects />
+        <Profile />
+        <Footer />
+      </main>
+    </div>
+  );
 }
 
 export default App;
